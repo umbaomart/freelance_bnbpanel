@@ -1,0 +1,83 @@
+.journey {
+  width: 100%;
+  padding: 10rem 1.5rem;
+  background: url('./../images/main-bg.png') repeat 0 0;
+  background-color: $darkGray;
+
+  color: $white;
+}
+
+.inner__wrapper {}
+
+.titile {}
+
+.title__text {
+  .journey & {
+    line-height: 1.4;
+
+    &:before {
+      bottom: -1rem;
+    }
+  }
+}
+
+.subtitle__text {
+  font-size: 2rem;
+  line-height: 1.2;
+  display: block;
+  text-align: center;
+}
+
+.fetures {
+  margin-top: 10rem;
+}
+
+.fetures__cards {
+  @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: stretch);
+}
+
+.fetures__cardsItem {
+  width: 25rem;
+}
+
+.fetures__cardsItemKv {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  background: $green;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0 auto;
+  @include u-flex($fd: row-reverse, $fw: nowrap, $jc: center, $ai: center);
+}
+
+.fetures__cardsItemImg {
+  width: 11rem;
+  height: 11rem;
+  background: $darkGray;
+  padding: 3rem;
+  border-radius: 50%;
+}
+
+.fetures__cardsItemTitle {}
+
+.fetures__cardsItemTitleText {
+  margin-top: 2.5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: $green;
+}
+
+.fetures__cardsItemContent {}
+
+.fetures__cardsItemContentText {
+  margin-top: 1.5rem;
+  font-size: 1.6rem;
+  text-align: center;
+  text-align: justify;
+}
+
+
+.fetures__bottom {}
+
+.fetures__content {}

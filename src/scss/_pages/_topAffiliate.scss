@@ -1,0 +1,152 @@
+.affiliate {
+  padding: 8rem 1.5rem;
+  position: relative;
+  background: url('./../images/bg_01.jpg') no-repeat center / cover;
+  color: $white;
+
+  &:before {
+    content: '';
+    position: absolute;
+    background: rgba($color: $black, $alpha: .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.inner__wrapper {
+  .affiliate & {
+    width: 100%;
+    max-width: 110rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.cards {
+  margin-top: 10rem;
+}
+
+.cards__flex {
+  @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: stretch);
+
+}
+
+.cards__item {
+  width: ((100% / 5) - 10);
+
+  width: 13rem;
+  height: 13rem;
+  position: relative;
+  border-radius: 50%;
+  background-color: $black;
+  @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &:before {
+    transform: scale(1.05);
+    background: $green;
+    animation: pulse2 .8s infinite;
+  }
+}
+
+.cards__level {}
+
+.cards__levelText {
+  font-size: 5rem;
+  // font-weight: bold;
+  font-size: $orbitron;
+}
+
+// .cards__levelSpan {
+//   background: $yellow;
+//   padding: .5rem 1rem;
+//   font-size: 1.6rem;
+//   color: $white;
+//   position: absolute;
+//   bottom: 0;
+// }
+
+.cards__name {
+  position: absolute;
+  right: -1rem;
+  top: 0;
+  background: $yellow;
+  border-radius: .2rem;
+  border: 1px solid $white;
+}
+
+.cards__nameText {
+  font-size: 1.4rem;
+  padding: .2rem .5rem;
+  color: $darkGray;
+  font-weight: bold;
+}
+
+.personalLink {
+  max-width: 60rem;
+  margin: 10rem auto 0;
+}
+
+.personalLinkInner {
+  // padding: 3rem;
+  // border: 1px dashed $green;
+}
+
+.personalLinkLabel {
+  width: 100%;
+  @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: stretch);
+  border: .1rem solid $white;
+}
+
+.personalLinkInput {
+  flex: 1;
+  font-size: 1.6rem;
+  padding: .8rem 1.6rem;
+  border: none;
+  background: $green;
+  color: $darkGray;
+}
+
+.personalLinkSpan.copy {
+  font-size: 1.6rem;
+  padding: .8rem 1.6rem;
+  background: $darkGray;
+  cursor: pointer;
+}
+
+.personalLinkFlex {
+  @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: stretch);
+  padding: 1rem 0;
+}
+
+.personalLinkInfo {
+  @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: stretch);
+}
+
+.personalLinkInfoText {
+  padding: .5rem 1rem;
+  font-size: 1.6rem;
+}
+
+.personalLinkInfoNum {
+  padding: .5rem 1rem;
+  font-size: 1.6rem;
+}
+
+.personalLinkInfo {
+  @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: stretch);
+}

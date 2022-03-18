@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Website Name</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, user-scalable=1, initial-scale=1, viewport-fit=cover">
+    <meta name="keywords" content="this is meta keywords">
+    <meta name="description" content="this is meta description">
+    <meta property="og:title" content="this is meta title">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="this is meta description">
+    <meta property="og:url" content="http://website.com">
+    <meta property="og:image" content="./_assets/images/_etc/ogp.jpg">
+    <meta property="fb:app_id" content="XXXXXXXXXXXXXXXX">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@XXXXX">
+    <meta name="twitter:creator" content="@XXXXX">
+    <meta name="twitter:image:src" content="./_assets/images/_etc/ogp.jpg">
+    <link rel="icon" type="image/x-icon" href="./_assets/images/_etc/favicon.ico">
+    <link rel="icon" type="image/png" href="./_assets/images/_etc/favicon.png">
+    <link rel="apple-touch-icon" type="image/png" href="./_assets/images/_etc/custom-icon.png">
+    
+    <!-- Styles-->
+    <link rel="stylesheet" media="print,screen" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" media="print,screen" href="./_assets/css/style.css">
+  </head>
+  <body class="topPage" id="top">
+    <header class="siteHeader">
+      <div class="siteHeader__inner">
+        <nav class="siteHeader__nav" role="navigator">
+          <div class="siteHeader__navLogo">
+            <div class="siteHeader__navLogoKv"><img src="./_assets/images/logo.png" alt=""></div>
+          </div>
+          <ul class="siteHeader__navList">
+            <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#about">ABOUT</a></li>
+            <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#stats">STATS</a></li>
+            <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#invest">INVEST</a></li>
+            <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#dividends">DIVIDENDS</a></li>
+            <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#referrals">REFERRALS</a></li>
+            <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="siteContent" role="main">
+      <section class="hero">
+        <div class="hero__area">
+          <div class="hero__flex">
+            <div class="hero__kv"><img src="./_assets/images/binance-coin-hero.webp" alt="binance-coin"></div>
+            <div class="hero__content">
+              <h1 class="hero__title"><span class="hero__titleText">Stable &</span><br><span class="hero__titleText">Profitable</span><br><span class="hero__titleExt">Yield Farming</span></h1>
+              <p class="hero__subtitle">Get started with the easiest and most secure platform</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="profit">
+        <div class="inner__wrapper">
+          <div class="title">
+            <h2 class="title__text">CALCULATE PROFIT</h2>
+          </div>
+          <div class="profit__flex">
+            <div class="profit__calc">
+              <div class="profit__calcFlex">
+                <div class="profit__bnbSelect">
+                  <div class="profit__title">
+                    <div class="profit__titleText">Deposit Period (days):</div>
+                  </div>
+                  <div class="custom-select">
+                    <select class="profit__bnbSelectBlock" id="selectPlan">
+                      <option value="0">10</option>
+                      <option value="1">10</option>
+                      <option value="2">20</option>
+                      <option value="3">30</option>
+                      <option value="4">40</option>
+                      <option value="5">50</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="profit__bnbDeposit">
+                  <div class="profit__title">
+                    <div class="profit__titleText">Deposit Amount :</div>
+                  </div>
+                  <div class="profit__bnbDepositBlock">
+                    <input class="profit__bnbInput" type="text" id="amt"><span class="profit__bnbSpan">BNB</span>
+                  </div>
+                </div>
+              </div>
+              <div class="profit__res">
+                <div class="profit__resFlex">
+                  <div class="profit__resItem dailyroi">
+                    <p class="profit__resItemText">Daily ROI :</p>
+                    <div class="profit__resItemLabel">
+                      <div class="profit__resItemLabelInner">
+                        <p class="profit__resItemLabelTotal">11.5</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profit__resItem profit">
+                    <p class="profit__resItemText">Total Profit :</p>
+                    <div class="profit__resItemLabel">
+                      <div class="profit__resItemLabelInner">
+                        <p class="profit__resItemLabelTotal">115%</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="profit__resItem return">
+                  <p class="profit__resItemText">In 10 days you will earn :</p>
+                  <div class="profit__resItemLabel">
+                    <div class="profit__resItemLabelInner">
+                      <p class="profit__resItemLabelTotal">1.15000 BNB</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="investBtn">
+                <button class="investBtnItem" type="button" id="investBtn">Invest</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="affiliate">
+        <div class="linkId" id="affiliate"></div>
+        <div class="inner__wrapper">
+          <div class="title">
+            <h2 class="title__text">AFFILIATE PROGRAM</h2>
+          </div>
+          <div class="cards">
+            <div class="cards__flex">
+              <div class="cards__item">
+                <div class="cards__level">
+                  <p class="cards__levelText">5%</p><span class="cards__levelSpan"></span>
+                </div>
+                <div class="cards__name">
+                  <p class="cards__nameText">LEVEL 1</p>
+                </div>
+              </div>
+              <div class="cards__item">
+                <div class="cards__level">
+                  <p class="cards__levelText">3%</p><span class="cards__levelSpan"></span>
+                </div>
+                <div class="cards__name">
+                  <p class="cards__nameText">LEVEL 2</p>
+                </div>
+              </div>
+              <div class="cards__item">
+                <div class="cards__level">
+                  <p class="cards__levelText">2%</p><span class="cards__levelSpan"></span>
+                </div>
+                <div class="cards__name">
+                  <p class="cards__nameText">LEVEL 3</p>
+                </div>
+              </div>
+              <div class="cards__item">
+                <div class="cards__level">
+                  <p class="cards__levelText">1%</p><span class="cards__levelSpan"></span>
+                </div>
+                <div class="cards__name">
+                  <p class="cards__nameText">LEVEL 4</p>
+                </div>
+              </div>
+              <div class="cards__item">
+                <div class="cards__level">
+                  <p class="cards__levelText">1%</p><span class="cards__levelSpan"></span>
+                </div>
+                <div class="cards__name">
+                  <p class="cards__nameText">LEVEL 5</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="personalLink">
+            <div class="personalLinkInner">
+              <div class="personalLinkLabel">
+                <input class="personalLinkInput" type="text" placeholder="Not Activated Yet"><span class="personalLinkSpan copy">COPY</span>
+              </div>
+              <div class="personalLinkFlex">
+                <div class="personalLinkInfo">
+                  <p class="personalLinkInfoText">Invited Users:</p><span class="personalLinkInfoNum">0</span>
+                </div>
+                <div class="personalLinkInfo">
+                  <p class="personalLinkInfoText">Total Earnings:</p><span class="personalLinkInfoNum">0 BNB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="farmInfo">
+        <div class="farmInfo__flex">
+          <div class="farmInfo__left">
+            <div class="farmInfo__kv"><img class="farmInfo__kvHolder" src="./_assets/images/bnb-min.jpg" alt=""></div>
+            <div class="farmInfo__card">
+              <div class="farmInfo__cardItem">
+                <div class="farmInfo__cardBox">
+                  <h3 class="farmInfo__cardTitle">Total Value Deposited</h3>
+                  <h4 class="farmInfo__cardTextBnb">8.36461 BNB</h4>
+                  <p class="farmInfo__cardTextSm">$ 3,272.74</p>
+                </div>
+              </div>
+              <div class="farmInfo__cardItem">
+                <div class="farmInfo__cardBox">
+                  <h3 class="farmInfo__cardTitle">Total Referral Earnings</h3>
+                  <h4 class="farmInfo__cardTextBnb">1.00375 BNB</h4>
+                  <p class="farmInfo__cardTextSm">$ 392.73</p>
+                </div>
+              </div>
+            </div>
+            <div class="farmInfo__btn">
+              <div class="farmInfo__btnInner"><a class="farmInfo__btnItem" href="#affiliate">Affiliate Program</a><a class="farmInfo__btnItem" href="https://bscscan.com/address/0x00BBD71BC73E5E49Dd5D1cc852a325bE9d712443#code" target="_blank">Verified Contract</a><a class="farmInfo__btnItem" href="https://t.me/bnbstake" target="_blank">Telegram</a></div>
+            </div>
+          </div>
+          <div class="farmInfo__right">
+            <div class="farmInfo__yFarm">
+              <h3 class="farmInfo__yFarmTitle">Your Farm</h3>
+              <div class="farmInfo__yFarmInner">
+                <div class="farmInfo__yFarmFlex">
+                  <div class="farmInfo__content">
+                    <p class="farmInfo__contentText">BNB to Harvest :</p>
+                    <p class="farmInfo__contentTotal">0.00000 BNB</p>
+                    <p class="farmInfo__contentNumber">$ 0.00</p>
+                  </div>
+                  <div class="farmInfo__btn">
+                    <div class="farmInfo__btnItem">Withdraw</div>
+                  </div>
+                </div>
+                <div class="farmInfo__yFarmFlex">
+                  <div class="farmInfo__content">
+                    <p class="farmInfo__contentText">BNB in Wallet:</p>
+                    <p class="farmInfo__contentTotal">0.00000 BNB</p>
+                    <p class="farmInfo__contentNumber">$ 0.00</p>
+                  </div>
+                  <div class="farmInfo__btn">
+                    <div class="farmInfo__btnItem">History</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="farmInfo__lastDep">
+              <div class="farmInfo__lastDepTitle">Last Deposits</div>
+              <div class="farmInfo__depList">
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0xaf1d5e050a05ff530f4063dac1fe2cf654af6d2b256e27b777fa5feb033826b5" target="_blank">Transaction Hash: 0xaf1...826b5</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0x8b9...18e36</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 0.14161 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/16 - 22:02:40</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan">10 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0x32d0a57143627be74d87658d7c6b98c615f4b8a3f09a92ca1ec12de9ad56e8cf" target="_blank">Transaction Hash: 0x32d...6e8cf</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0x781...92af6</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 0.10000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/16 - 04:52:50</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 10 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0x51f411fccda6ac78918e39fa34ebd1c207216d0c610557188447633a7d587d51" target="_blank">Transaction Hash: 0x139...f029d</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0x90e...bAEa0</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal">  1.10000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/14 - 16:45:07</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 10 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0x51f411fccda6ac78918e39fa34ebd1c207216d0c610557188447633a7d587d51" target="_blank">Transaction Hash: 0x51f...87d51</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0x22B...69B69</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 0.10000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/14 - 16:45:07</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 10 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0x51f411fccda6ac78918e39fa34ebd1c207216d0c610557188447633a7d587d51" target="_blank">Transaction Hash: 0x969...e8b82</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0x22B...69B69</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 0.10000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/14 - 16:45:07</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 10 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0x05391d890b5088adb3a282abece7b701b18c9d2f0293e7549a80bc916252eb0f" target="_blank">Transaction Hash: 0x053...2eb0f</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0x1C4...66f51</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 0.50000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/13 - 11:54:22</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 10 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0xabe9308ce0e8721d6dafa53ad3cc65e8e6fef15e0821b936120ba20303c80654" target="_blank">Transaction Hash: 0xabe...80654</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0xe4c...6C810</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 1.00000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/11 - 12:48:06</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 10 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0x472e34b50b0588c7bfc0601e4b5af5caa9b9c358e685b98cab11fccb273d9c31" target="_blank">Transaction Hash: 0x0c7...68c50</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0x380...9DDe6</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 0.20000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/11 - 02:28:36</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 10 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0x472e34b50b0588c7bfc0601e4b5af5caa9b9c358e685b98cab11fccb273d9c31" target="_blank">Transaction Hash: 0x472...d9c31</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0x380...9DDe6</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 0.07000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/11 - 02:20:48</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 30 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0xed3cf1138f9933331182f89d738e21654486c6b44ff496977732b6e49513b1ce" target="_blank">Transaction Hash: 0xed3...3b1ce</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0xF90...E9143</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 1.00000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/09 - 14:39:53</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 10 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0x795def75fd84b6d7b8146d634e0158037df57a2c136e948a01c7cc1051d2b7ca" target="_blank">Transaction Hash: 0x795...2b7ca</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0x1C7...2bD10</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 0.50000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/08 - 14:50:14</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 10 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0x740d310a430c84b291f1a8caa50001c5297b229f23726335548ab1d5765c6045" target="_blank">Transaction Hash: 0x22f...0f0ee</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0xcE0...d9e97</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 1.00000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/08 - 11:08:46</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 10 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0x30ecc19ffd4f426482be90e9748f063817e9efeb7f5f1ce5b9e56497531b6c9b" target="_blank">Transaction Hash: 0x30e...b6c9b</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0x7d6...5598C</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 0.25000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/07 - 22:38:26</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 10 days</span></p>
+                  </div>
+                </div>
+                <div class="farmInfo__depListItem">
+                  <div class="farmInfo__depListItemBox box01">
+                    <div class="farmInfo__depListItemGroup1"><a class="farmInfo__depListItemGroup1Transaction" href="https://bscscan.com/tx/0xed1b759427deac3aaac3210f0e8cda479d9665e3ceef8fc3545bad53e2779522" target="_blank">Transaction Hash: 0xed1...79522</a>
+                      <p class="farmInfo__depListItemGroup1Wallet">Wallet: 0xcE0...d9e97</p>
+                    </div>
+                  </div>
+                  <div class="farmInfo__depListItemBox box02">
+                    <p class="farmInfo__depListItemBoxAmount">Amount :<span class="farmInfo__depListItemBoxTotal"> 0.50000 BNB</span></p>
+                  </div>
+                  <div class="farmInfo__depListItemBox box03">
+                    <div class="farmInfo__depListItemBoxDate">Date: 2022/03/07 - 13:42:56</div>
+                    <p class="farmInfo__depListItemBoxPlan">Plan:<span class="farmInfo__depListItemBoxPlanSpan"> 10 days</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="formInfo__read">
+          <h3 class="formInfo__readTitle">Read before use</h3>
+          <div class="formInfo__readContent">
+            <p class="formInfo__readContentText">The principal deposit cannot be withdrawn, the only return users can get are daily dividends and referral rewards. Payments is possible only if contract balance have enough BNB. Please analyze the transaction history and balance of the smart contract before investing. High risk - high profit, DYOR</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="faq">
+        <div class="inner__wrapper">
+          <div class="title">
+            <h2 class="title__text">Frequently Asked Questions</h2>
+          </div>
+          <div class="faq__list">
+            <div class="faq__listItem">
+              <div class="faq__listItemQuestion">
+                <p class="faq__listItemQuestionText">What is BNBPANEL?</p><span class="faq__listItemQuestionPlus"></span>
+              </div>
+              <div class="faq__listItemContent">
+                <p class="faq__listItemContentText">BNBPANEL, earn up to 405% ROI in 30 days or even more, with five levels of referral rewards given outright, safety features, adjustable settings and transferrable dividends.</p>
+              </div>
+            </div>
+            <div class="faq__listItem">
+              <div class="faq__listItemQuestion">
+                <p class="faq__listItemQuestionText">What is BNBPANEL?</p><span class="faq__listItemQuestionPlus"></span>
+              </div>
+              <div class="faq__listItemContent">
+                <p class="faq__listItemContentText">BNBPANEL, earn up to 405% ROI in 30 days or even more, with five levels of referral rewards given outright, safety features, adjustable settings and transferrable dividends.</p>
+              </div>
+            </div>
+            <div class="faq__listItem">
+              <div class="faq__listItemQuestion">
+                <p class="faq__listItemQuestionText">What is BNBPANEL?</p><span class="faq__listItemQuestionPlus"></span>
+              </div>
+              <div class="faq__listItemContent">
+                <p class="faq__listItemContentText">BNBPANEL, earn up to 405% ROI in 30 days or even more, with five levels of referral rewards given outright, safety features, adjustable settings and transferrable dividends.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="journey">
+        <div class="inner__wrapper">
+          <div class="title">
+            <h2 class="title__text">Start your yield farm journey<br><span class="subtitle__text">with BNB Stake Community</span></h2>
+          </div>
+          <div class="fetures">
+            <div class="fetures__cards">
+              <div class="fetures__cardsItem">
+                <div class="fetures__cardsItemKv">
+                  <div class="fetures__cardsItemImg"><img src="./_assets/images/user-secret.svg" alt=""></div>
+                </div>
+                <div class="fetures__cardsItemTitle">
+                  <h3 class="fetures__cardsItemTitleText">Ironclad Security</h3>
+                </div>
+                <div class="fetures__cardsItemContent">
+                  <p class="fetures__cardsItemContentText">The smart contract code has been successful audited by 2 independent companies</p>
+                </div>
+              </div>
+              <div class="fetures__cardsItem">
+                <div class="fetures__cardsItemKv">
+                  <div class="fetures__cardsItemImg"><img src="./_assets/images/chart-icon.svg" alt=""></div>
+                </div>
+                <div class="fetures__cardsItemTitle">
+                  <h3 class="fetures__cardsItemTitleText">High &amp; Stable APR</h3>
+                </div>
+                <div class="fetures__cardsItemContent">
+                  <p class="fetures__cardsItemContentText">In the code sets the highest APR among all yield farms on BSC, rules of a smart contract can’t be changed, nothing can affect the amount of income.</p>
+                </div>
+              </div>
+              <div class="fetures__cardsItem">
+                <div class="fetures__cardsItemKv">
+                  <div class="fetures__cardsItemImg"><img src="./_assets/images/support-icon.svg" alt=""></div>
+                </div>
+                <div class="fetures__cardsItemTitle">
+                  <h3 class="fetures__cardsItemTitleText">Customer Support</h3>
+                </div>
+                <div class="fetures__cardsItemContent">
+                  <p class="fetures__cardsItemContentText">BNB Stake 24/7 provides you our knowledgable and experienced customer support team in Telegram</p>
+                </div>
+              </div>
+            </div>
+            <div class="fetures__bottom">
+              <div class="fetures__content">
+                <p class="fetures__content"><strong>BNB Stake</strong> BLOCKCHAIN INVESTMENT PLATFORM</p>
+                <p class="fetures__content">@BNBPANEL.COM, 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="siteFooter">
+      <div class="inner__wrapper">
+        <div class="siteFooter__nav">
+          <ul class="siteFooter__navList">
+            <li class="siteFooter__navListItem"><a href="https://www.stateofthedapps.com/dapps/bnbstake-io" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-sop.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-sop-hover.png" alt=""></a></li>
+            <li class="siteFooter__navListItem"><a href="https://dappradar.com/binance-smart-chain/high-risk/bnb-stake-1" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-dapp.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-dapp-hover.png" alt=""></a></li>
+            <li class="siteFooter__navListItem"><a href="https://twitter.com/bnbstake" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-twitter.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-twitter-hover.png" alt=""></a></li>
+            <li class="siteFooter__navListItem"><a href="https://t.me/bnbstakeio" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-telegram.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-telegram-hover.png" alt=""></a></li>
+            <li class="siteFooter__navListItem"><a href="https://www.facebook.com/bnbstakeio" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/undefined" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-fb-hover.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Scripts-->
+    <script src="./_assets/lib/polyfill/smoothscroll.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./_assets/js/bundle.js"></script>
+  </body>
+</html>

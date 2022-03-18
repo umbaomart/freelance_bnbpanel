@@ -1,0 +1,332 @@
+.farmInfo {
+  width: 100%;
+  padding: 10rem 1.5rem;
+  background: url('./../images/main-bg.png') repeat 0 0;
+  background-color: $green;
+}
+
+.farmInfo__flex {
+  width: 100%;
+  max-width: 110rem;
+  margin: 0 auto;
+  @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: stretch);
+}
+
+.farmInfo__left {
+  width: 35rem;
+}
+
+.farmInfo__kv {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.farmInfo__kvHolder {}
+
+.farmInfo__card {}
+
+.farmInfo__cardItem {
+  margin-top: 2.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.farmInfo__cardBox {
+  background: $darkGray;
+  padding: 2rem;
+}
+
+.farmInfo__cardTitle {
+  color: $white;
+  font-size: 2.4rem;
+}
+
+.farmInfo__cardTextBnb {
+  color: $yellow;
+  font-size: 3rem;
+  margin-top: 1.5rem;
+}
+
+.farmInfo__cardTextSm {
+  color: rgba($color: $white, $alpha: .8);
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.farmInfo__btn {
+  margin-top: 2rem;
+}
+
+.farmInfo__btnInner {}
+
+.farmInfo__btnItem {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1.5rem 1.6rem;
+  font-size: 1.6rem;
+  border: 2px solid $darkGray;
+  color: $white;
+  @include u-trs;
+  background: $darkGray;
+  text-decoration: none;
+  font-weight: bold;
+  overflow: hidden;
+  border-radius: .5rem;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+
+  &:hover {
+    border: 2px solid $darkGray;
+    background: $green;
+    text-decoration: none;
+    color: $darkGray;
+  }
+
+  &:not(:first-child) {
+    margin-top: 2.5rem;
+  }
+}
+
+.farmInfo__right {
+  // flex: 1;
+  width: 100% - 35;
+  margin-left: 3rem;
+}
+
+.farmInfo__yFarm {
+  padding: 2rem;
+  border: 2px solid $darkGray;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: $green;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: .2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 70%;
+    background: rgba($color: $darkGray, $alpha: .5);
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+  }
+}
+
+.farmInfo__yFarmTitle {
+  font-size: 2.5rem;
+  color: $darkGray;
+}
+
+.farmInfo__yFarmInner {
+  @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: stretch);
+}
+
+.farmInfo__yFarmFlex {
+  width: 45%;
+}
+
+.farmInfo__content {}
+
+.farmInfo__contentText {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $white;
+}
+
+.farmInfo__contentTotal {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: .5rem 1rem;
+  margin: 1rem 0;
+  background: $white;
+  color: $yellow;
+  border: 1px solid $yellow;
+  display: inline-block;
+}
+
+.farmInfo__contentNumber {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.6rem;
+}
+
+.farmInfo__btn {}
+
+.farmInfo__btnItem {}
+
+.farmInfo__yFarmFlex {
+  margin-top: 2.5rem;
+}
+
+.farmInfo__content {}
+
+.farmInfo__contentText {
+  font-size: 2.5rem;
+  color: $darkGray;
+}
+
+.farmInfo__contentTotal {}
+
+.farmInfo__contentNumber {}
+
+.farmInfo__btn {}
+
+.farmInfo__btnItem {}
+
+.farmInfo__lastDep {
+  margin-top: 2.5rem;
+  padding: 2rem 0;
+  border: 2px solid #212121;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #ABD071;
+  position: relative;
+  height: 48.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+.farmInfo__lastDepTitle {
+  font-size: 2.5rem;
+  color: $darkGray;
+  font-weight: bold;
+  padding-left: 2rem;
+}
+
+.farmInfo__depList {
+  margin-top: 2.5rem;
+  overflow-y: scroll;
+  height: 38rem;
+  padding: 0 2rem;
+
+  &::-webkit-scrollbar {
+    width: .8rem;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: $darkGray;
+    border-radius: 1rem;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $yellow;
+    border-radius: 1rem;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $yellow;
+  }
+}
+
+.farmInfo__depListItem {
+  @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: center);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: .2rem solid $yellow;
+  background: rgba($color: $darkGray, $alpha: .8);
+  color: $white;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  &:last-child {
+    margin-bottom: 1rem;
+  }
+}
+
+.farmInfo__depListItemBox {
+  // flex: 1;
+}
+
+.farmInfo__depListItemBox.box01 {
+  // flex: 1;
+}
+
+.farmInfo__depListItemGroup1 {}
+
+.farmInfo__depListItemGroup1Transaction {
+  font-size: 1.3rem;
+  color: $green;
+
+  &:hover {
+    color: $green;
+    // text-decoration: none;
+  }
+}
+
+.farmInfo__depListItemGroup1Wallet {
+  font-size: 1.3rem;
+}
+
+.farmInfo__depListItemBox.box02 {}
+
+.farmInfo__depListItemBoxAmount {
+  font-size: 1.3rem;
+}
+
+.farmInfo__depListItemBoxTotal {
+  font-size: 1.3rem;
+  color: $green;
+}
+
+.farmInfo__depListItemBox.box03 {}
+
+.farmInfo__depListItemBoxDate {
+  font-size: 1.3rem;
+}
+
+.farmInfo__depListItemBoxPlan {
+  font-size: 1.3rem;
+}
+
+.farmInfo__depListItemBoxPlanSpan {
+  font-size: 1.3rem;
+  color: $green;
+}
+
+.formInfo__read {
+  width: 100%;
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  margin-top: 2.5rem;
+  border-radius: 1rem;
+  border: 2px solid $white;
+  background: $darkGray;
+  color: $white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+    0 6px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+.formInfo__readTitle {
+  font-size: 2.5rem;
+}
+
+.formInfo__readContent {
+  margin-top: 2rem;
+}
+
+.formInfo__readContentText {
+  font-size: 1.6rem;
+  text-align: justify;
+}

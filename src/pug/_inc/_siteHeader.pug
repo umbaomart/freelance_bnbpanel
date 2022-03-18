@@ -1,0 +1,20 @@
+
+-
+    let main_menu = [
+            {title: "ABOUT", slug: "#about", link: ""},
+            {title: "STATS", slug: "#stats", link: ""},
+            {title: "INVEST", slug: "#invest", link: ""},
+            {title: "DIVIDENDS", slug: "#dividends", link: ""},
+            {title: "REFERRALS", slug: "#referrals", link: ""},
+            {title: "FAQ", slug: "#faq", link: ""}
+        ];
+
+header.siteHeader
+    .siteHeader__inner
+        nav.siteHeader__nav(role='navigator')
+            .siteHeader__navLogo
+                .siteHeader__navLogoKv
+                    img(src=`${relativePath}/_assets/images/logo.png`, alt="")
+            ul.siteHeader__navList: each item in main_menu
+                li.siteHeader__navItem
+                    a.siteHeader__navItemLink(href=`${item.slug}`)= item.title

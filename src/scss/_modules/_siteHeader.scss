@@ -1,0 +1,82 @@
+/*====================================================================
+siteHeader
+====================================================================*/
+.siteHeader {
+  background: $black;
+  box-shadow: 1px 1px 6px 4px rgba($black, 0.04);
+  height: $headerHeightPC;
+  left: 0;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  // headerの上部固定の時に、ページごとにリピートされないように
+  @include u-print {
+    position: absolute;
+  }
+
+  &__innerArea {
+    @include u-contentCenter($widthPC: $contentCenter, $paddingLR-PC: 15px, $paddingLR-SP: 15px);
+    // @include u-flex($jc: space-between, $ai: center);
+  }
+}
+
+
+.siteHeader__inner {
+  width: 100%;
+  // max-width: 1200px;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+
+.siteHeader__nav {
+  @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: center);
+}
+
+.siteHeader__navLogo {}
+
+.siteHeader__navLogoKv {
+  width: 20rem;
+}
+
+.siteHeader__navList {
+  @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: center);
+}
+
+.siteHeader__navItem {
+  margin-left: 5rem;
+}
+
+.siteHeader__navItemLink {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: $white;
+  font-family: $orbitron;
+  letter-spacing: .05em;
+  @include u-trs;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    width: 0%;
+    height: 2px;
+    background-color: $green;
+    @include u-trs;
+  }
+
+  &:hover {
+    color: $green;
+    text-decoration: none;
+
+    &:before {
+      width: 100%;
+      left: 0;
+      right: auto;
+    }
+  }
+}
