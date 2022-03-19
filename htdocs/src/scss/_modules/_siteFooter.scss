@@ -1,0 +1,123 @@
+/*====================================================================
+siteFooter
+====================================================================*/
+.siteFooter {
+  background-color: $darkGray;
+  padding: 7rem 1.5rem 5rem;
+}
+
+.siteFooter__nav {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.siteFooter__navList {
+  padding: 0;
+  list-style: none;
+  @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+  padding-bottom: 2.5rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    left: 50%;
+    bottom: 0;
+    background: rgba($color: $gray, $alpha: .5);
+    transform: translateX(-50%);
+  }
+
+  // border: 2px solid $green;
+  // border-radius: 5rem;
+  // padding: 2.5rem 4rem;
+}
+
+.siteFooter__navListItem {
+
+  &:first-child {
+    width: 20rem;
+  }
+
+  &:nth-child(2) {
+    width: 20rem;
+  }
+
+  &:nth-child(3) {
+    width: 5rem;
+    margin-left: 5rem !important;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 90%;
+      background: rgba($color: $gray, $alpha: .5);
+      top: 50%;
+      left: -2.5rem;
+      transform: translateY(-50%);
+    }
+  }
+
+  &:nth-child(4) {
+    width: 5rem;
+  }
+
+  &:nth-child(5) {
+    width: 5rem;
+  }
+
+  &:not(:first-child) {
+    margin-left: 2.5rem;
+  }
+}
+
+.siteFooter__navListItemLink {
+  display: block;
+  position: relative;
+
+  &:hover {
+
+    .siteFooter__navListItemHover {
+      opacity: 1;
+    }
+
+    .siteFooter__navListItemKv {
+      opacity: 0;
+    }
+  }
+}
+
+.siteFooter__navListItemKv {
+  opacity: 1;
+  @include u-trs;
+}
+
+.siteFooter__navListItemHover {
+  position: absolute;
+  @include u-trs;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+.siteFooter__bot {
+  color: $gray;
+}
+
+.siteFooter__botContent {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.siteFooter__botContentText {
+  letter-spacing: .05rem;
+  font-size: 1.3rem;
+
+  strong {
+    color: $green;
+  }
+}

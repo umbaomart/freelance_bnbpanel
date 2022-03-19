@@ -1,0 +1,112 @@
+.faq {
+  background: $darkGray;
+  color: $white;
+  padding: 8rem 1.5rem;
+
+  @include u-mqMax {
+    padding: 4rem 1.5rem;
+  }
+}
+
+.title__text {
+
+  .faq & {
+    text-align: center;
+  }
+}
+
+.inner__wrapper {}
+
+.faq__list {
+  width: 100%;
+  max-width: 70rem;
+  margin: 7rem auto 0;
+
+  @include u-mqMax {
+    margin: 5rem auto 0;
+  }
+}
+
+.faq__listItem {
+  border-top: 1px solid $green;
+
+  &:last-child {
+    border-bottom: 1px solid $green;
+  }
+}
+
+.faq__listItemQuestion {
+  padding: 2rem 1rem;
+  position: relative;
+  @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: center);
+
+  @include u-mqMax {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.faq__listItemQuestionText {
+  font-size: 2rem;
+  font-weight: bold;
+  flex: 1;
+  padding-right: 1rem;
+
+  @include u-mqMax {
+    font-size: 1.8rem;
+  }
+}
+
+.faq__listItemQuestionPlus {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  @include u-trs;
+
+  &:before,
+  &:after {
+    content: '';
+    @include u-trs;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:before {
+    width: 2px;
+    height: 100%;
+    background: $green;
+    opacity: 1;
+
+    .is-active & {
+      height: 0;
+      opacity: 0;
+    }
+  }
+
+  &:after {
+    height: 2px;
+    width: 100%;
+    background: $green;
+  }
+}
+
+.faq__listItemContent {
+  padding: 0 3.5rem 2rem 3rem;
+  display: none;
+
+  @include u-mqMax {
+    padding: 0 3rem 1.5rem 2.5rem;
+  }
+}
+
+.faq__listItemContentText {
+  font-size: 1.8rem;
+  text-align: justify;
+  color: rgba($color: $white, $alpha: .8);
+
+  @include u-mqMax {
+    font-size: 1.6rem;
+  }
+}

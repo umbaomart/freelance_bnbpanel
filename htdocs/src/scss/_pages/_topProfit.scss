@@ -1,0 +1,240 @@
+.profit {
+  background-color: $darkGray;
+  color: $white;
+  padding: 8rem 1.5rem;
+
+  @include u-mqMax {
+    padding: 4rem 1.5rem;
+  }
+}
+
+.inner__wrapper {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  // padding: 10rem 0;
+
+  .profit & {
+    max-width: 70rem;
+  }
+}
+
+.title {
+  @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+}
+
+.title__text {
+  font-size: 3rem;
+  position: relative;
+  letter-spacing: .1em;
+
+  @include u-mqMax {
+    font-size: 2.4rem;
+  }
+
+  &:before {
+    content: '';
+    width: 10rem;
+    height: .3rem;
+    bottom: -.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $green;
+    position: absolute;
+
+    @include u-mqMax {
+      height: .2rem;
+    }
+  }
+}
+
+.profit__flex {}
+
+.profit__calc {
+  padding: 4rem 2.5rem;
+  margin-top: 5rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: $darkGray;
+  border: .2rem solid $green;
+
+  @include u-mqMax {
+    border: .1rem solid $green;
+    padding: 2.5rem 2rem;
+    margin-top: 4rem;
+  }
+}
+
+.profit__calcFlex {
+  @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: stretch);
+
+  @include u-mqMax {
+    display: block;
+  }
+}
+
+.profit__bnbSelect {
+  width: 30rem;
+
+  @include u-mqMax {
+    width: 100%;
+  }
+}
+
+.profit__bnbSelectBlock {
+  width: 100%;
+}
+
+.profit__title {}
+
+.profit__titleText {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+
+  @include u-mqMax {
+    font-size: 1.4rem;
+  }
+}
+
+.profit__bnbDeposit {
+  width: 30rem;
+
+  @include u-mqMax {
+    margin-top: 2rem;
+  }
+}
+
+.profit__bnbDepositBlock {
+  background: $green;
+  @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: center);
+}
+
+.profit__bnbInput {
+  width: 100%;
+  background: $green;
+  border: none;
+  padding: .8rem 1.6rem;
+  font-size: 1.6rem;
+  color: $white;
+
+  @include u-mqMax {
+    font-size: 1.4rem;
+  }
+
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+.profit__bnbInput:focus {
+  background-color: $green;
+}
+
+.profit__bnbSpan {
+  background: $darkGray;
+  padding: .5rem 1rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  color: $yellow;
+  letter-spacing: .1rem;
+  margin-right: 1rem;
+  border: 1px solid $yellow;
+}
+
+.profit__res {}
+
+.profit__resFlex {
+  margin-top: 2rem;
+  @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: center);
+
+  @include u-mqMax {
+    display: block;
+  }
+}
+
+.profit__resItem {
+  @include u-flex($fd: row, $fw: nowrap, $jc: flex-start, $ai: center);
+  width: 30rem;
+  padding: 0;
+
+  &.return {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+.profit__resItem.dailyroi {}
+
+.profit__resItemText {
+  font-size: 1.6rem;
+  letter-spacing: .1rem;
+  border-top: 1px solid $green;
+  border-left: 1px solid $green;
+  border-bottom: 1px solid $green;
+
+  @include u-mqMax {
+    font-size: 1.4rem;
+  }
+}
+
+.profit__resItemLabel {}
+
+.profit__resItemLabelInner {}
+
+.profit__resItemLabelTotal {
+  margin: 0;
+  font-size: 1.6rem;
+  padding: .5rem 1rem;
+  background-color: $yellow;
+
+  @include u-mqMax {
+    font-size: 1.4rem;
+  }
+}
+
+.profit__resItem.profit {
+
+  @include u-mqMax {
+    margin-top: 1.5rem;
+  }
+}
+
+.profit__resItemText {
+  // margin: 0 1rem 0 0;
+  padding: .4rem 1rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.investBtn {
+  margin-top: 4rem;
+  @include u-flex($fd: row, $fw: nowrap, $jc: center, $ai: center);
+
+  @include u-mqMax {
+    margin-top: 2rem;
+  }
+}
+
+.investBtnItem {
+  width: 100%;
+  font-size: 1.6rem;
+  background: $green;
+  border: 2px solid $green;
+  color: $white;
+  padding: 1rem;
+  // border-radius: .5rem;
+  box-sizing: border-box;
+  font-weight: bold;
+  @include u-trs;
+  text-transform: uppercase;
+
+  @include u-mqMax {
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    color: $green;
+    background: $darkGray;
+    border: 2px solid $green;
+  }
+}
