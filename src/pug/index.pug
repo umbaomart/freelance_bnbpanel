@@ -10,7 +10,7 @@
 
 //- EXTERNAL LIBRARIES
 - const isJquery = true
-- const isWowEffects = false
+- const isWowEffects = true
 - const isSwiper = false
 - const isBootstrap = false
 - const isPolyfill = true
@@ -165,13 +165,14 @@ html(lang="ja")
 
         //- MAIN CONTENT
         main.siteContent(role="main")
-            section.hero
+            section.hero#about
+                //- .linkId#about
                 .hero__area
                     .hero__flex
-                        .hero__kv
+                        .hero__kv.wow.fadeInUp
                             img(src=`${relativePath}/_assets/images/binance-coin-hero.webp`, alt="binance-coin")
                         .hero__content
-                            h1.hero__title
+                            h1.hero__title.wow.fadeInUp
                                 span.hero__titleText
                                     | Stable &
                                 br
@@ -180,15 +181,16 @@ html(lang="ja")
                                 br
                                 span.hero__titleExt
                                     | Yield Farming
-                            p.hero__subtitle Get started with the easiest and most secure platform
+                            p.hero__subtitle.wow.fadeInUp Get started with the easiest and most secure platform
 
-            section.profit
+            section.profit#invest
+                //- .linkId#invest
                 .inner__wrapper
-                    .title
+                    .title.wow.fadeInUp
                         h2.title__text CALCULATE PROFIT
                     .profit__flex
-                        .profit__calc
-                            .profit__calcFlex
+                        .profit__calc.wow.fadeInUp
+                            .profit__calcFlex.wow.fadeInUp
                                 .profit__bnbSelect
                                     .profit__title
                                         .profit__titleText Deposit Period (days):
@@ -204,9 +206,9 @@ html(lang="ja")
                                     .profit__title
                                         .profit__titleText Deposit Amount :
                                     .profit__bnbDepositBlock
-                                        input(type="text" id="amt").profit__bnbInput
+                                        input(type="number" id="amt").profit__bnbInput
                                         span.profit__bnbSpan BNB
-                            .profit__res
+                            .profit__res.wow.fadeInUp
                                 .profit__resFlex
                                     .profit__resItem.dailyroi
                                         p.profit__resItemText Daily ROI :
@@ -223,17 +225,17 @@ html(lang="ja")
                                     .profit__resItemLabel
                                         .profit__resItemLabelInner
                                             p.profit__resItemLabelTotal 1.15000 BNB
-                            .investBtn
+                            .investBtn.wow.fadeInUp
                                 button.investBtnItem(type="button" id="investBtn") Invest
             |
             |
-            section.affiliate
-                .linkId#affiliate
+            section.affiliate#referrals
+                //- .linkId#referrals
                 .inner__wrapper
-                    .title
+                    .title.wow.fadeInUp
                         h2.title__text AFFILIATE PROGRAM
                     .cards
-                        .cards__flex
+                        .cards__flex.wow.fadeInUp
                             .cards__item
                                 .cards__level
                                     p.cards__levelText 5%
@@ -267,7 +269,7 @@ html(lang="ja")
                     |
                     |
                     .personalLink
-                        .personalLinkInner
+                        .personalLinkInner.wow.fadeInUp
                             .personalLinkLabel
                                 input.personalLinkInput(type="text" placeholder="Not Activated Yet")
                                 span.personalLinkSpan.copy COPY
@@ -280,28 +282,29 @@ html(lang="ja")
                                     span.personalLinkInfoNum 0 BNB
             |
             |
-            section.farmInfo
+            section.farmInfo#dividends
+                //- .linkId#dividends
                 .farmInfo__flex
                     .farmInfo__left
-                        .farmInfo__kv
+                        .farmInfo__kv.wow.fadeInUp
                             img.farmInfo__kvHolder(src=`${relativePath}/_assets/images/bnb-min.jpg` alt="")
                         .farmInfo__card
-                            .farmInfo__cardItem
+                            .farmInfo__cardItem.wow.fadeInUp
                                 .farmInfo__cardBox
                                     h3.farmInfo__cardTitle Total Value Deposited
                                     h4.farmInfo__cardTextBnb 8.36461 BNB
                                     p.farmInfo__cardTextSm $ 3,272.74
-                            .farmInfo__cardItem
+                            .farmInfo__cardItem.wow.fadeInUp
                                 .farmInfo__cardBox
                                     h3.farmInfo__cardTitle Total Referral Earnings
                                     h4.farmInfo__cardTextBnb 1.00375 BNB
                                     p.farmInfo__cardTextSm $ 392.73
                         .farmInfo__btn
                             .farmInfo__btnInner
-                                a.farmInfo__btnItem(href="#affiliate") Affiliate Program
-                                a.farmInfo__btnItem(href="https://bscscan.com/address/0x00BBD71BC73E5E49Dd5D1cc852a325bE9d712443#code" target="_blank") Verified Contract
-                                a.farmInfo__btnItem(href="https://t.me/bnbstake" target="_blank") Telegram
-                    .farmInfo__right
+                                a.farmInfo__btnItem.wow.fadeInUp(href="#affiliate") Affiliate Program
+                                a.farmInfo__btnItem.wow.fadeInUp(href="https://bscscan.com/address/0x00BBD71BC73E5E49Dd5D1cc852a325bE9d712443#code" target="_blank") Verified Contract
+                                a.farmInfo__btnItem.wow.fadeInUp(href="https://t.me/bnbstake" target="_blank") Telegram
+                    .farmInfo__right.wow.fadeInUp
                         .farmInfo__yFarm
                             h3.farmInfo__yFarmTitle Your Farm
                             .farmInfo__yFarmInner
@@ -321,7 +324,7 @@ html(lang="ja")
                                         .farmInfo__btnItem History
                         |
                         |
-                        .farmInfo__lastDep
+                        .farmInfo__lastDep.wow.fadeInUp
                             .farmInfo__lastDepTitle Last Deposits
                             .farmInfo__depList
                                 each item in ldep
@@ -339,18 +342,19 @@ html(lang="ja")
                                                 span.farmInfo__depListItemBoxPlanSpan=item.plan
                 |
                 |
-                .formInfo__read
+                .formInfo__read.wow.fadeInUp
                     h3.formInfo__readTitle Read before use
                     .formInfo__readContent
                         p.formInfo__readContentText
                             | The principal deposit cannot be withdrawn, the only return users can get are daily dividends and referral rewards. Payments is possible only if contract balance have enough BNB. Please analyze the transaction history and balance of the smart contract before investing. High risk - high profit, DYOR
             |
             |
-            section.faq
+            section.faq#faq
+                .linkId#faq
                 .inner__wrapper
-                    .title
+                    .title.wow.fadeInUp
                         h2.title__text Frequently Asked Questions
-                    .faq__list
+                    .faq__list.wow.fadeInUp
                         .faq__listItem
                             .faq__listItemQuestion
                                 p.faq__listItemQuestionText What is BNBPANEL?
@@ -376,13 +380,13 @@ html(lang="ja")
             |
             section.journey
                 .inner__wrapper
-                    .title
+                    .title.wow.fadeInUp
                         h2.title__text
                             | Start your yield farm journey
                             br
                             span.subtitle__text with BNB Stake Community
                     .fetures
-                        .fetures__cards
+                        .fetures__cards.wow.fadeInUp
                             each item in features
                                 .fetures__cardsItem
                                     .fetures__cardsItemKv
@@ -392,11 +396,6 @@ html(lang="ja")
                                         h3.fetures__cardsItemTitleText=item.title
                                     .fetures__cardsItemContent
                                         p.fetures__cardsItemContentText=item.content
-                        .fetures__bottom
-                            .fetures__content
-                                p.fetures__content <strong>BNB Stake</strong> BLOCKCHAIN INVESTMENT PLATFORM
-                                p.fetures__content @BNBPANEL.COM, 2022
-
 
         //- FOOTER
         include ./_inc/_siteFooter.pug

@@ -21,7 +21,7 @@
 }
 
 .faq__listItemQuestion {
-  padding: 1rem;
+  padding: 2rem 1rem;
   position: relative;
   @include u-flex($fd: row, $fw: nowrap, $jc: space-between, $ai: center);
 }
@@ -70,11 +70,12 @@
 }
 
 .faq__listItemContent {
-  padding: 0 3.5rem 1rem 3rem;
+  padding: 0 3.5rem 2rem 3rem;
   display: none;
 }
 
 .faq__listItemContentText {
   font-size: 1.8rem;
   text-align: justify;
+  color: rgba($color: $white, $alpha: .8);
 }

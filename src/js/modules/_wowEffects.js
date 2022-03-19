@@ -7,7 +7,7 @@ export const wowEffects = () => {
       offset: 100,
       mobile: true,
       live: true,
-      callback: function (box) {},
+      callback: function (box) { },
       scrollContainer: null,
     });
     wow.init();

@@ -19,7 +19,7 @@
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/_polyfill */ \"./src/js/modules/_polyfill.js\");\n/* harmony import */ var _modules_customSelect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/_customSelect */ \"./src/js/modules/_customSelect.js\");\n/* harmony import */ var _modules_smoothScroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/_smoothScroll */ \"./src/js/modules/_smoothScroll.js\");\n/* harmony import */ var _modules_myaccordion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/_myaccordion */ \"./src/js/modules/_myaccordion.js\");\n // import { viewport } from './modules/_viewport';\n// import { btnClickFunc } from './modules/_btnClickFunc';\n// import { getSearchParams } from './modules/_getSearchParams';\n// import { accordion } from './modules/_accordion';\n// import { backToTop } from './modules/_backToTop';\n// import { checkView } from './modules/_checkView';\n\n // import { modal } from './modules/_modal';\n\n\n // import { stickyHeader } from './modules/_stickyHeader';\n// import { swiperSlider } from './modules/_swiperSlider';\n// import { wowEffects } from './modules/_wowEffects';\n// import { smoothScrollVs } from './modules/_smoothScrollVs';\n// import { sampleArray } from './modules/_sampleArray';\n\n$(function () {\n  (0,_modules_polyfill__WEBPACK_IMPORTED_MODULE_0__.polyfill)();\n  (0,_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_2__.smoothScroll)();\n  (0,_modules_myaccordion__WEBPACK_IMPORTED_MODULE_3__.myaccordion)(); // smoothScrollVs()\n  // sampleArray();\n  // viewport();\n  // btnClickFunc();\n  // wowEffects();\n  // accordion();\n  // swiperSlider();\n\n  (0,_modules_customSelect__WEBPACK_IMPORTED_MODULE_1__.customSelect)(); // backToTop();\n  // modal();\n}); // $(window).on('load resize scroll', function () {\n//   checkView();\n//   stickyHeader();\n// });\n\n//# sourceURL=webpack://npm-scripts-webpack-test/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/_polyfill */ \"./src/js/modules/_polyfill.js\");\n/* harmony import */ var _modules_customSelect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/_customSelect */ \"./src/js/modules/_customSelect.js\");\n/* harmony import */ var _modules_smoothScroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/_smoothScroll */ \"./src/js/modules/_smoothScroll.js\");\n/* harmony import */ var _modules_myaccordion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/_myaccordion */ \"./src/js/modules/_myaccordion.js\");\n/* harmony import */ var _modules_navTopPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/_navTopPage */ \"./src/js/modules/_navTopPage.js\");\n/* harmony import */ var _modules_wowEffects__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/_wowEffects */ \"./src/js/modules/_wowEffects.js\");\n // import { viewport } from './modules/_viewport';\n// import { btnClickFunc } from './modules/_btnClickFunc';\n// import { getSearchParams } from './modules/_getSearchParams';\n// import { accordion } from './modules/_accordion';\n// import { backToTop } from './modules/_backToTop';\n// import { checkView } from './modules/_checkView';\n\n // import { modal } from './modules/_modal';\n\n\n\n // import { stickyHeader } from './modules/_stickyHeader';\n// import { swiperSlider } from './modules/_swiperSlider';\n\n // import { smoothScrollVs } from './modules/_smoothScrollVs';\n// import { sampleArray } from './modules/_sampleArray';\n\n$(function () {\n  (0,_modules_polyfill__WEBPACK_IMPORTED_MODULE_0__.polyfill)();\n  (0,_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_2__.smoothScroll)();\n  (0,_modules_myaccordion__WEBPACK_IMPORTED_MODULE_3__.myaccordion)();\n  (0,_modules_navTopPage__WEBPACK_IMPORTED_MODULE_4__.navTopPage)(); // smoothScrollVs()\n  // sampleArray();\n  // viewport();\n  // btnClickFunc();\n\n  (0,_modules_wowEffects__WEBPACK_IMPORTED_MODULE_5__.wowEffects)(); // accordion();\n  // swiperSlider();\n\n  (0,_modules_customSelect__WEBPACK_IMPORTED_MODULE_1__.customSelect)(); // backToTop();\n  // modal();\n}); // $(window).on('load resize scroll', function () {\n//   checkView();\n//   stickyHeader();\n// });\n\n//# sourceURL=webpack://npm-scripts-webpack-test/./src/js/index.js?");
 
 /***/ }),
 
@@ -51,6 +51,20 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/js/modules/_navTopPage.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/_navTopPage.js ***!
+  \***************************************/
+/*! namespace exports */
+/*! export navTopPage [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"navTopPage\": function() { return /* binding */ navTopPage; }\n/* harmony export */ });\nvar navTopPage = function navTopPage() {\n  var li = document.querySelectorAll(\".siteHeader__navItemLink\");\n  var sec = document.querySelectorAll(\"section\");\n\n  function activeMenu() {\n    var len = sec.length;\n\n    while (--len && window.scrollY + 97 < sec[len].offsetTop) {}\n\n    li.forEach(function (ltx) {\n      return ltx.classList.remove(\"active\");\n    });\n    li[len].classList.add(\"active\");\n  }\n\n  activeMenu();\n  window.addEventListener(\"scroll\", activeMenu);\n};\n\n//# sourceURL=webpack://npm-scripts-webpack-test/./src/js/modules/_navTopPage.js?");
+
+/***/ }),
+
 /***/ "./src/js/modules/_polyfill.js":
 /*!*************************************!*\
   !*** ./src/js/modules/_polyfill.js ***!
@@ -75,7 +89,21 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"smoothScroll\": function() { return /* binding */ smoothScroll; }\n/* harmony export */ });\nvar smoothScroll = function smoothScroll() {\n  $('a[href^=\"#\"]').on(\"click\", function (e) {\n    var speed = 600;\n    var href = $(e.currentTarget).attr(\"href\");\n    var target = $(href == \"#\" || href == \"\" ? \"html\" : href);\n    var position = target.offset().top;\n    $(\"body, html\").delay(200).animate({\n      scrollTop: position\n    }, speed, \"swing\");\n    return false;\n  });\n};\n\n//# sourceURL=webpack://npm-scripts-webpack-test/./src/js/modules/_smoothScroll.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"smoothScroll\": function() { return /* binding */ smoothScroll; }\n/* harmony export */ });\nvar smoothScroll = function smoothScroll() {\n  $('a[href^=\"#\"]').on(\"click\", function (e) {\n    var speed = 600;\n    var href = $(e.currentTarget).attr(\"href\");\n    var target = $(href == \"#\" || href == \"\" ? \"html\" : href);\n    var position = target.offset().top;\n    var navHeight = $('.siteHeader').outerHeight(true);\n    console.log(navHeight);\n    position = position - navHeight;\n    $(\"body, html\").delay(200).animate({\n      scrollTop: position\n    }, speed, \"swing\");\n    return false;\n  });\n};\n\n//# sourceURL=webpack://npm-scripts-webpack-test/./src/js/modules/_smoothScroll.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/_wowEffects.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/_wowEffects.js ***!
+  \***************************************/
+/*! namespace exports */
+/*! export wowEffects [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"wowEffects\": function() { return /* binding */ wowEffects; }\n/* harmony export */ });\nvar wowEffects = function wowEffects() {\n  var ua = window.navigator.userAgent;\n\n  var wowInit = function wowInit() {\n    var wow = new WOW({\n      boxClass: 'wow',\n      animateClass: 'animated',\n      offset: 100,\n      mobile: true,\n      live: true,\n      callback: function callback(box) {},\n      scrollContainer: null\n    });\n    wow.init();\n  }; // IE Browser\n\n\n  if (ua.indexOf('Trident') != -1 || ua.indexOf('MSIE') != -1) {\n    $(window).on('load', function (e) {\n      wowInit();\n    });\n  } else {\n    wowInit();\n  }\n};\n\n//# sourceURL=webpack://npm-scripts-webpack-test/./src/js/modules/_wowEffects.js?");
 
 /***/ })
 

@@ -23,6 +23,7 @@
     <link rel="apple-touch-icon" type="image/png" href="./_assets/images/_etc/custom-icon.png">
     
     <!-- Styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" media="print,screen" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
     <link rel="stylesheet" media="print,screen" href="./_assets/css/style.css">
   </head>
@@ -34,36 +35,35 @@
             <div class="siteHeader__navLogoKv"><img src="./_assets/images/logo.png" alt=""></div>
           </div>
           <ul class="siteHeader__navList">
-            <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#about">ABOUT</a></li>
-            <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#stats">STATS</a></li>
+            <li class="siteHeader__navItem"><a class="siteHeader__navItemLink active" href="#about">ABOUT</a></li>
             <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#invest">INVEST</a></li>
-            <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#dividends">DIVIDENDS</a></li>
             <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#referrals">REFERRALS</a></li>
+            <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#dividends">DIVIDENDS</a></li>
             <li class="siteHeader__navItem"><a class="siteHeader__navItemLink" href="#faq">FAQ</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="siteContent" role="main">
-      <section class="hero">
+      <section class="hero" id="about">
         <div class="hero__area">
           <div class="hero__flex">
-            <div class="hero__kv"><img src="./_assets/images/binance-coin-hero.webp" alt="binance-coin"></div>
+            <div class="hero__kv wow fadeInUp"><img src="./_assets/images/binance-coin-hero.webp" alt="binance-coin"></div>
             <div class="hero__content">
-              <h1 class="hero__title"><span class="hero__titleText">Stable &</span><br><span class="hero__titleText">Profitable</span><br><span class="hero__titleExt">Yield Farming</span></h1>
-              <p class="hero__subtitle">Get started with the easiest and most secure platform</p>
+              <h1 class="hero__title wow fadeInUp"><span class="hero__titleText">Stable &</span><br><span class="hero__titleText">Profitable</span><br><span class="hero__titleExt">Yield Farming</span></h1>
+              <p class="hero__subtitle wow fadeInUp">Get started with the easiest and most secure platform</p>
             </div>
           </div>
         </div>
       </section>
-      <section class="profit">
+      <section class="profit" id="invest">
         <div class="inner__wrapper">
-          <div class="title">
+          <div class="title wow fadeInUp">
             <h2 class="title__text">CALCULATE PROFIT</h2>
           </div>
           <div class="profit__flex">
-            <div class="profit__calc">
-              <div class="profit__calcFlex">
+            <div class="profit__calc wow fadeInUp">
+              <div class="profit__calcFlex wow fadeInUp">
                 <div class="profit__bnbSelect">
                   <div class="profit__title">
                     <div class="profit__titleText">Deposit Period (days):</div>
@@ -84,11 +84,11 @@
                     <div class="profit__titleText">Deposit Amount :</div>
                   </div>
                   <div class="profit__bnbDepositBlock">
-                    <input class="profit__bnbInput" type="text" id="amt"><span class="profit__bnbSpan">BNB</span>
+                    <input class="profit__bnbInput" type="number" id="amt"><span class="profit__bnbSpan">BNB</span>
                   </div>
                 </div>
               </div>
-              <div class="profit__res">
+              <div class="profit__res wow fadeInUp">
                 <div class="profit__resFlex">
                   <div class="profit__resItem dailyroi">
                     <p class="profit__resItemText">Daily ROI :</p>
@@ -116,7 +116,7 @@
                   </div>
                 </div>
               </div>
-              <div class="investBtn">
+              <div class="investBtn wow fadeInUp">
                 <button class="investBtnItem" type="button" id="investBtn">Invest</button>
               </div>
             </div>
@@ -124,14 +124,13 @@
         </div>
       </section>
       
-      <section class="affiliate">
-        <div class="linkId" id="affiliate"></div>
+      <section class="affiliate" id="referrals">
         <div class="inner__wrapper">
-          <div class="title">
+          <div class="title wow fadeInUp">
             <h2 class="title__text">AFFILIATE PROGRAM</h2>
           </div>
           <div class="cards">
-            <div class="cards__flex">
+            <div class="cards__flex wow fadeInUp">
               <div class="cards__item">
                 <div class="cards__level">
                   <p class="cards__levelText">5%</p><span class="cards__levelSpan"></span>
@@ -176,7 +175,7 @@
           </div>
           
           <div class="personalLink">
-            <div class="personalLinkInner">
+            <div class="personalLinkInner wow fadeInUp">
               <div class="personalLinkLabel">
                 <input class="personalLinkInput" type="text" placeholder="Not Activated Yet"><span class="personalLinkSpan copy">COPY</span>
               </div>
@@ -193,19 +192,19 @@
         </div>
       </section>
       
-      <section class="farmInfo">
+      <section class="farmInfo" id="dividends">
         <div class="farmInfo__flex">
           <div class="farmInfo__left">
-            <div class="farmInfo__kv"><img class="farmInfo__kvHolder" src="./_assets/images/bnb-min.jpg" alt=""></div>
+            <div class="farmInfo__kv wow fadeInUp"><img class="farmInfo__kvHolder" src="./_assets/images/bnb-min.jpg" alt=""></div>
             <div class="farmInfo__card">
-              <div class="farmInfo__cardItem">
+              <div class="farmInfo__cardItem wow fadeInUp">
                 <div class="farmInfo__cardBox">
                   <h3 class="farmInfo__cardTitle">Total Value Deposited</h3>
                   <h4 class="farmInfo__cardTextBnb">8.36461 BNB</h4>
                   <p class="farmInfo__cardTextSm">$ 3,272.74</p>
                 </div>
               </div>
-              <div class="farmInfo__cardItem">
+              <div class="farmInfo__cardItem wow fadeInUp">
                 <div class="farmInfo__cardBox">
                   <h3 class="farmInfo__cardTitle">Total Referral Earnings</h3>
                   <h4 class="farmInfo__cardTextBnb">1.00375 BNB</h4>
@@ -214,10 +213,10 @@
               </div>
             </div>
             <div class="farmInfo__btn">
-              <div class="farmInfo__btnInner"><a class="farmInfo__btnItem" href="#affiliate">Affiliate Program</a><a class="farmInfo__btnItem" href="https://bscscan.com/address/0x00BBD71BC73E5E49Dd5D1cc852a325bE9d712443#code" target="_blank">Verified Contract</a><a class="farmInfo__btnItem" href="https://t.me/bnbstake" target="_blank">Telegram</a></div>
+              <div class="farmInfo__btnInner"><a class="farmInfo__btnItem wow fadeInUp" href="#affiliate">Affiliate Program</a><a class="farmInfo__btnItem wow fadeInUp" href="https://bscscan.com/address/0x00BBD71BC73E5E49Dd5D1cc852a325bE9d712443#code" target="_blank">Verified Contract</a><a class="farmInfo__btnItem wow fadeInUp" href="https://t.me/bnbstake" target="_blank">Telegram</a></div>
             </div>
           </div>
-          <div class="farmInfo__right">
+          <div class="farmInfo__right wow fadeInUp">
             <div class="farmInfo__yFarm">
               <h3 class="farmInfo__yFarmTitle">Your Farm</h3>
               <div class="farmInfo__yFarmInner">
@@ -244,7 +243,7 @@
               </div>
             </div>
             
-            <div class="farmInfo__lastDep">
+            <div class="farmInfo__lastDep wow fadeInUp">
               <div class="farmInfo__lastDepTitle">Last Deposits</div>
               <div class="farmInfo__depList">
                 <div class="farmInfo__depListItem">
@@ -448,7 +447,7 @@
           </div>
         </div>
         
-        <div class="formInfo__read">
+        <div class="formInfo__read wow fadeInUp">
           <h3 class="formInfo__readTitle">Read before use</h3>
           <div class="formInfo__readContent">
             <p class="formInfo__readContentText">The principal deposit cannot be withdrawn, the only return users can get are daily dividends and referral rewards. Payments is possible only if contract balance have enough BNB. Please analyze the transaction history and balance of the smart contract before investing. High risk - high profit, DYOR</p>
@@ -456,12 +455,13 @@
         </div>
       </section>
       
-      <section class="faq">
+      <section class="faq" id="faq">
+        <div class="linkId" id="faq"></div>
         <div class="inner__wrapper">
-          <div class="title">
+          <div class="title wow fadeInUp">
             <h2 class="title__text">Frequently Asked Questions</h2>
           </div>
-          <div class="faq__list">
+          <div class="faq__list wow fadeInUp">
             <div class="faq__listItem">
               <div class="faq__listItemQuestion">
                 <p class="faq__listItemQuestionText">What is BNBPANEL?</p><span class="faq__listItemQuestionPlus"></span>
@@ -492,11 +492,11 @@
       
       <section class="journey">
         <div class="inner__wrapper">
-          <div class="title">
+          <div class="title wow fadeInUp">
             <h2 class="title__text">Start your yield farm journey<br><span class="subtitle__text">with BNB Stake Community</span></h2>
           </div>
           <div class="fetures">
-            <div class="fetures__cards">
+            <div class="fetures__cards wow fadeInUp">
               <div class="fetures__cardsItem">
                 <div class="fetures__cardsItemKv">
                   <div class="fetures__cardsItemImg"><img src="./_assets/images/user-secret.svg" alt=""></div>
@@ -531,26 +531,26 @@
                 </div>
               </div>
             </div>
-            <div class="fetures__bottom">
-              <div class="fetures__content">
-                <p class="fetures__content"><strong>BNB Stake</strong> BLOCKCHAIN INVESTMENT PLATFORM</p>
-                <p class="fetures__content">@BNBPANEL.COM, 2022</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="siteFooter">
-      <div class="inner__wrapper">
+      <div class="inner__wrapper wow fadeInUp">
         <div class="siteFooter__nav">
           <ul class="siteFooter__navList">
-            <li class="siteFooter__navListItem"><a href="https://www.stateofthedapps.com/dapps/bnbstake-io" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-sop.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-sop-hover.png" alt=""></a></li>
-            <li class="siteFooter__navListItem"><a href="https://dappradar.com/binance-smart-chain/high-risk/bnb-stake-1" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-dapp.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-dapp-hover.png" alt=""></a></li>
-            <li class="siteFooter__navListItem"><a href="https://twitter.com/bnbstake" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-twitter.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-twitter-hover.png" alt=""></a></li>
-            <li class="siteFooter__navListItem"><a href="https://t.me/bnbstakeio" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-telegram.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-telegram-hover.png" alt=""></a></li>
-            <li class="siteFooter__navListItem"><a href="https://www.facebook.com/bnbstakeio" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/undefined" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-fb-hover.png" alt=""></a></li>
+            <li class="siteFooter__navListItem wow fadeInUp"><a class="siteFooter__navListItemLink" href="https://www.stateofthedapps.com/dapps/bnbstake-io" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-sop.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-sop-hover.png" alt=""></a></li>
+            <li class="siteFooter__navListItem wow fadeInUp"><a class="siteFooter__navListItemLink" href="https://dappradar.com/binance-smart-chain/high-risk/bnb-stake-1" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-dapp.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-dapp-hover.png" alt=""></a></li>
+            <li class="siteFooter__navListItem wow fadeInUp"><a class="siteFooter__navListItemLink" href="https://twitter.com/bnbstake" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-twitter.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-twitter-hover.png" alt=""></a></li>
+            <li class="siteFooter__navListItem wow fadeInUp"><a class="siteFooter__navListItemLink" href="https://t.me/bnbstakeio" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-telegram.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-telegram-hover.png" alt=""></a></li>
+            <li class="siteFooter__navListItem wow fadeInUp"><a class="siteFooter__navListItemLink" href="https://www.facebook.com/bnbstakeio" target="_blank"><img class="siteFooter__navListItemKv" src="./_assets/images/icon-fb.png" alt=""><img class="siteFooter__navListItemHover" src="./_assets/images/icon-fb-hover.png" alt=""></a></li>
           </ul>
+        </div>
+        <div class="siteFooter__bot">
+          <div class="siteFooter__botContent">
+            <p class="siteFooter__botContentText"><strong>BNB Stake</strong> BLOCKCHAIN INVESTMENT PLATFORM</p>
+            <p class="siteFooter__botContentText">@BNBPANEL.COM, 2022</p>
+          </div>
         </div>
       </div>
     </footer>
@@ -559,6 +559,7 @@
     <script src="./_assets/lib/polyfill/smoothscroll.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="./_assets/js/bundle.js"></script>
   </body>
 </html>

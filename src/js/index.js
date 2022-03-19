@@ -9,9 +9,10 @@ import { customSelect } from './modules/_customSelect';
 // import { modal } from './modules/_modal';
 import { smoothScroll } from './modules/_smoothScroll';
 import { myaccordion } from './modules/_myaccordion';
+import { navTopPage } from './modules/_navTopPage';
 // import { stickyHeader } from './modules/_stickyHeader';
 // import { swiperSlider } from './modules/_swiperSlider';
-// import { wowEffects } from './modules/_wowEffects';
+import { wowEffects } from './modules/_wowEffects';
 // import { smoothScrollVs } from './modules/_smoothScrollVs';
 // import { sampleArray } from './modules/_sampleArray';
 
@@ -19,11 +20,12 @@ $(function () {
   polyfill();
   smoothScroll();
   myaccordion();
+  navTopPage()
   // smoothScrollVs()
   // sampleArray();
   // viewport();
   // btnClickFunc();
-  // wowEffects();
+  wowEffects();
   // accordion();
   // swiperSlider();
   customSelect();

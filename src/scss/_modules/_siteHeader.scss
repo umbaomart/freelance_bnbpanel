@@ -79,4 +79,15 @@ siteHeader
       right: auto;
     }
   }
+
+  &.active {
+    color: $green;
+    text-decoration: none;
+
+    &:before {
+      width: 100%;
+      left: 0;
+      right: auto;
+    }
+  }
 }

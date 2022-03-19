@@ -82,6 +82,10 @@
   padding: .8rem 1.6rem;
   font-size: 1.6rem;
   color: $white;
+
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
 }
 
 .profit__bnbInput:focus {

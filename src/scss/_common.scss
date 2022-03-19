@@ -115,3 +115,17 @@ main
     padding-top: $headerHeightSP;
   }
 }
+
+section {
+  position: relative;
+}
+
+.linkId {
+  position: absolute;
+  top: -$headerHeightPC;
+  left: 0;
+
+  @include u-mqMax {
+    
+  }
+}

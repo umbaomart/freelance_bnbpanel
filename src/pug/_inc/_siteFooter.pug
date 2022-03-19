@@ -21,20 +21,25 @@
             link: "https://t.me/bnbstakeio"
         },
         {
+            img: "icon-fb.png",
             img2: "icon-fb-hover.png",
             link: "https://www.facebook.com/bnbstakeio"
         },
     ]
 
 footer.siteFooter
-    .inner__wrapper
+    .inner__wrapper.wow.fadeInUp
         .siteFooter__nav
             ul.siteFooter__navList
                 each item in footerNavItems
-                    li.siteFooter__navListItem
-                        a(href=`${item.link}` target="_blank")
+                    li.siteFooter__navListItem.wow.fadeInUp
+                        a.siteFooter__navListItemLink(href=`${item.link}` target="_blank")
                             img.siteFooter__navListItemKv(src=`${relativePath}/_assets/images/${item.img}`, alt="")
                             img.siteFooter__navListItemHover(src=`${relativePath}/_assets/images/${item.img2}`, alt="")
+        .siteFooter__bot
+            .siteFooter__botContent
+                p.siteFooter__botContentText <strong>BNB Stake</strong> BLOCKCHAIN INVESTMENT PLATFORM
+                p.siteFooter__botContentText @BNBPANEL.COM, 2022
 
         //- back to top
         //- .toTop.js-toTop
